@@ -3,7 +3,8 @@ Options -Indexes
 Options +FollowSymLinks
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^blacspicemedia\.com [NC]
-RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://www.blacspicemedia.com/$1 [R=301,L]
 
 RewriteCond %{SCRIPT_FILENAME} !-d

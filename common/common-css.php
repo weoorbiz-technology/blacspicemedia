@@ -15,19 +15,19 @@
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/variables.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/header.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/footer.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/clients.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/faq.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/services.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/breadcrumb.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/contact.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/about.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/testimonials.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/hero-slider.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/productions.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/animations.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/gallery.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/articles.css">
-<link rel="stylesheet" href="<?= BASEURL ?>assets/css/whatsapp.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>variables.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>header.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>footer.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>clients.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>faq.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>services.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>breadcrumb.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>contact.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>about.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>testimonials.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>hero-slider.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>productions.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>animations.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>gallery.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>articles.css">
+<link rel="stylesheet" href="<?= BASEURL_CSS ?>whatsapp.css">

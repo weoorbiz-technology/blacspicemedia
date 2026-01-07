@@ -5,7 +5,7 @@ include_once('db.php');
     <div class="custom-navbar d-flex justify-content-between align-items-center">
         <!-- Logo -->
         <a class="navbar-brand" href="<?= BASEURL ?>">
-            <img src="<?= BASEURL ?>assets/img/logo.png" alt="PixelNova">
+            <img src="<?= BASEURL ?>assets/img/logo.png" alt="BlacspiceMedia">
         </a>
 
         <!-- Desktop Navigation -->
@@ -43,7 +43,8 @@ include_once('db.php');
 <!-- Added ID for JS toggle -->
 <div id="mobileMenu" class="mobile-menu-overlay">
     <div class="mobile-menu-header">
-        <a href="<?= BASEURL ?>"><img src="<?= BASEURL ?>assets/img/logo.png" alt="PixelNova" class="mobile-logo"></a>
+        <a href="<?= BASEURL ?>"><img src="<?= BASEURL ?>assets/img/logo.png" alt="BlacspiceMedia"
+                class="mobile-logo"></a>
         <!-- Close button removed, using toggle button -->
     </div>
 
