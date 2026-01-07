@@ -56,7 +56,6 @@ try {
 	define("COMMON_API", BASEURL . 'common/api/');
 	define("CALLURL", BASEURL . 'common/api/api.php');
 
-	// Define temp_api_url to allow API_URL definition without warning
 	$temp_api_url = COMMON_API;
 	define("API_URL", $temp_api_url);
 
