@@ -4,7 +4,7 @@
 
 <link rel="icon" type="image/png" href="<?= BASEURL ?>favicon.png">
 
-<link rel="stylesheet" href="<?= BASEURL_CSS ?>bootstrap.css">
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="<?= BASEURL_CSS ?>icons/css/all.css">
 <link rel="stylesheet" href="<?= BASEURL_CSS ?>animate.css">
 <link rel="stylesheet" href="<?= BASEURL_CSS ?>jquery.UI.css">
@@ -15,8 +15,8 @@
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Mukta+Malar:wght@200;300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-<link rel="stylesheet" href="<?= BASEURL_CSS ?>variables.css">
-<link rel="stylesheet" href="<?= BASEURL_CSS ?>header.css">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/header.css">
 <link rel="stylesheet" href="<?= BASEURL_CSS ?>footer.css">
 <link rel="stylesheet" href="<?= BASEURL_CSS ?>clients.css">
 <link rel="stylesheet" href="<?= BASEURL_CSS ?>faq.css">
