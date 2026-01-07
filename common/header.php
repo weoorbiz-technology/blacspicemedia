@@ -1,5 +1,5 @@
 <?php
-// include_once('db.php');
+include_once('db.php');
 ?>
 <div id="navbar">
     <div class="custom-navbar d-flex justify-content-between align-items-center">
