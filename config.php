@@ -55,10 +55,7 @@ try {
 	define("BASEURL", PROTOCOL . DOMAIN . $temp_baseurl . '/');
 	define("COMMON_API", BASEURL . 'common/api/');
 	define("CALLURL", BASEURL . 'common/api/api.php');
-
-	$temp_api_url = COMMON_API;
 	define("API_URL", $temp_api_url);
-
 	define("BASEURL_ASSETS", BASEURL . 'assets/');
 	define("BASEURL_CSS", BASEURL_ASSETS . 'css/');
 	define("BASEURL_JS", BASEURL_ASSETS . 'js/');
@@ -69,7 +66,10 @@ try {
 	define("BASEURL_ICONS", BASEURL_IMG . 'icons/');
 	define("MINIFY", $minify);
 
-	// Session already started at top of file
+	// Set sessions if needed
+	if (!isset($_SESSION)) {
+		session_start();
+	}
 	$_SESSION['legend_api_base_url'] = $temp_api_url;
 	$_SESSION['legend_base_url'] = BASEURL;
 	$_SESSION['legend_salt'] = SALT;
