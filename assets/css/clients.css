@@ -1,0 +1,100 @@
+/* Client Logos Section */
+.client-section {
+    padding: 60px 0;
+    background-color: var(--bg-light);
+    overflow: hidden;
+}
+
+.client-section .row {
+    align-items: center;
+}
+
+.client-title h3 {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text-dark);
+    margin-bottom: 0;
+    max-width: 300px;
+}
+
+/* Slider Container */
+.logo-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.logo-track {
+    display: inline-flex;
+    align-items: center;
+    animation: scroll 30s linear infinite;
+    gap: 60px;
+    /* Space between logos */
+    padding-left: 60px;
+    /* Initial offset */
+}
+
+/* Individual Logo */
+.client-logo {
+    height: 60px;
+    /* Increased height for better visibility */
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.client-logo:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.05);
+}
+
+/* Animation Keyframes */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Move by half the total width (since we have 2 sets) */
+    }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .client-section {
+        padding: 33px 0;
+    }
+
+    .client-title {
+        margin-bottom: 30px;
+        text-align: left;
+        padding-left: 15px;
+        /* Alignment fix */
+    }
+
+    .client-title h3 {
+        font-size: 20px;
+        max-width: 100%;
+    }
+
+    .logo-track {
+        gap: 40px;
+        animation-duration: 20s;
+        /* Faster on mobile if needed, or keep same speed */
+    }
+
+    .client-logo {
+        height: 45px;
+        /* Increased mobile size */
+    }
+}

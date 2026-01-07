@@ -1,0 +1,173 @@
+/* Team Page Styles */
+.team-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.team-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.team-header h2 {
+    font-size: 42px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    font-family: var(--font-primary);
+}
+
+.team-header h2 span {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.team-header p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+/* Team Card */
+.team-card {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 16px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+}
+
+.team-card:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border: 2px solid var(--primary-color);
+}
+
+
+/* Team Member Image */
+.team-img-wrapper {
+    width: 125px;
+    height: 125px;
+    margin: 0 auto 25px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-img {
+    transform: scale(1.1);
+}
+
+/* Lime Border Animation */
+.team-img-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.team-card:hover .team-img-wrapper::before,
+.team-img-wrapper::before {
+    border-color: var(--primary-color);
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+}
+
+/* Team Member Info */
+.team-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.team-info span {
+    font-size: 14px;
+    color: #777;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Social Icons */
+.team-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.team-social-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.team-social-icon:hover {
+    background-color: var(--primary-color);
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .team-section {
+        padding: 33px 0;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .team-img-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .team-header h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}

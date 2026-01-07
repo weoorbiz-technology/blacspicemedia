@@ -1,0 +1,43 @@
+/* Scroll Animation Utility */
+/* Use with animate.css classes - triggered on scroll */
+
+.animate-on-scroll {
+    opacity: 0;
+}
+
+/* Stagger delay utilities */
+.delay-1 {
+    animation-delay: 0.1s !important;
+}
+
+.delay-2 {
+    animation-delay: 0.2s !important;
+}
+
+.delay-3 {
+    animation-delay: 0.3s !important;
+}
+
+.delay-4 {
+    animation-delay: 0.4s !important;
+}
+
+.delay-5 {
+    animation-delay: 0.5s !important;
+}
+
+/* Smooth animation duration override */
+.animated {
+    animation-duration: 0.8s !important;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+
+    .animate-on-scroll,
+    .animated {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

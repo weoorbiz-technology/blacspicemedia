@@ -1,0 +1,38 @@
+:root {
+    /* Colors */
+    --primary-color: #C0FF00;
+    /* Lime Green from reference */
+    --primary-hover: #b0e600;
+    --text-dark: #1a1a1a;
+    --text-light: #ffffff;
+    --bg-light: #ffffff;
+    --bg-dark: #000000;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+
+    /* Typography */
+    --font-primary: 'Mukta Malar', sans-serif;
+    /* Preserving existing font choice */
+    --font-display: 'Cuprum', sans-serif;
+
+    /* Spacing */
+    --header-height: 80px;
+
+    /* Transitions */
+    --transition-speed: 0.3s;
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Fix for Horizontal Scroll / Animations */
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.Page-wrapper {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
