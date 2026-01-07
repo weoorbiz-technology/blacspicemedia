@@ -13,16 +13,18 @@ header("Expires: 0"); // Proxies.
 
 try {
 	// Detect Protocol: Check for Cloud Run's X-Forwarded-Proto or standard HTTPS
-	if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || 
-		$_SERVER['SERVER_PORT'] == 443 || 
-		(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) {
+	if (
+		(!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ||
+		$_SERVER['SERVER_PORT'] == 443 ||
+		(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')
+	) {
 		$protocol = "https://";
 	} else {
 		$protocol = "http://";
 	}
 
 	$domainName = $_SERVER['HTTP_HOST'];
-	
+
 	// Determine if we are in a subdirectory based on the script location vs the domain root
 	// This helps with localhost wamp setups vs production root domains
 	if ($domainName == 'localhost' || strpos($domainName, '127.0.0.1') !== false) {
@@ -53,7 +55,11 @@ try {
 	define("BASEURL", PROTOCOL . DOMAIN . $temp_baseurl . '/');
 	define("COMMON_API", BASEURL . 'common/api/');
 	define("CALLURL", BASEURL . 'common/api/api.php');
-	define("API_URL", $temp_api_url); 
+
+	// Define temp_api_url to allow API_URL definition without warning
+	$temp_api_url = COMMON_API;
+	define("API_URL", $temp_api_url);
+
 	define("BASEURL_ASSETS", BASEURL . 'assets/');
 	define("BASEURL_CSS", BASEURL_ASSETS . 'css/');
 	define("BASEURL_JS", BASEURL_ASSETS . 'js/');
@@ -63,9 +69,8 @@ try {
 	define("PLACEHOLDER_IMG", BASEURL_IMG . 'placeholder/img.png');
 	define("BASEURL_ICONS", BASEURL_IMG . 'icons/');
 	define("MINIFY", $minify);
-	
-	// Set sessions if needed
-	if(!isset($_SESSION)) { session_start(); }
+
+	// Session already started at top of file
 	$_SESSION['legend_api_base_url'] = $temp_api_url;
 	$_SESSION['legend_base_url'] = BASEURL;
 	$_SESSION['legend_salt'] = SALT;
