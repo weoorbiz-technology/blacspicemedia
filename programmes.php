@@ -67,7 +67,7 @@ require_once('programme_data.php');
                         <?php foreach ($nac_programs as $prog): ?>
                             <a href="programme-detail.php?id=<?= $prog['id'] ?>" class="prog-grid-card">
                                 <div class="prog-card-img-wrapper">
-                                    <img src="<?= BASEURL ?>assets/img/programmes/nac-2026-2028.png"
+                                    <img src="<?= BASEURL ?>assets/img/programmes/nac-2026-2028.jpg"
                                         alt="<?= $prog['name'] ?>" class="prog-card-thumb">
                                     <span class="prog-type-badge"><?= $prog['type'] ?></span>
                                 </div>
@@ -100,7 +100,7 @@ require_once('programme_data.php');
                         <?php foreach ($customized_programs as $prog): ?>
                             <a href="programme-detail.php?id=<?= $prog['id'] ?>" class="prog-grid-card">
                                 <div class="prog-card-img-wrapper">
-                                    <img src="<?= BASEURL ?>assets/img/programmes/customized-programmes.png"
+                                    <img src="<?= BASEURL ?>assets/img/programmes/customized-programmes.jpg"
                                         alt="<?= $prog['name'] ?>" class="prog-card-thumb">
                                     <span class="prog-type-badge"><?= $prog['type'] ?></span>
                                 </div>
